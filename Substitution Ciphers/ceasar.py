@@ -1,5 +1,5 @@
 import random
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = "abcdefghijklmnopqrstuvwxyz1234567890"
 
 
 def encrypt_caesar(original, shift=None):
@@ -11,10 +11,10 @@ def encrypt_caesar(original, shift=None):
     for letter in original:
         if letter.isalpha():
             if letter.islower():
-                shifted_index = (alphabet.index(letter) + shift) % 26
+                shifted_index = (alphabet.index(letter) + shift) % 36
                 new.append(alphabet[shifted_index])
             else:
-                shifted_index = (alphabet.index(letter.lower()) + shift) % 26
+                shifted_index = (alphabet.index(letter.lower()) + shift) % 36
                 new.append(alphabet[shifted_index].upper())
         else:
             new.append(letter)
@@ -28,10 +28,10 @@ def decrypt_caesar(cipher, shift):
     for letter in cipher:
         if letter.isalpha():
             if letter.islower():
-                shifted_index = (alphabet.index(letter) - shift) % 26
+                shifted_index = (alphabet.index(letter) - shift) % 36
                 new.append(alphabet[shifted_index])
             else:
-                shifted_index = (alphabet.index(letter.lower()) - shift) % 26
+                shifted_index = (alphabet.index(letter.lower()) - shift) % 36
                 new.append(alphabet[shifted_index].upper())
         else:
             new.append(letter)

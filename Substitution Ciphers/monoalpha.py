@@ -1,6 +1,6 @@
 import random
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = "abcdefghijklmnopqrstuvwxyz1234567890"
 
 
 def encrypt(original, key=None):
@@ -12,7 +12,7 @@ def encrypt(original, key=None):
     new = []
 
     for letter in original:
-        if letter.isalpha():
+        if letter.isalpha() :
             if letter.islower():
                 new.append(key[alphabet.index(letter)])
             else:
