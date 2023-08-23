@@ -5,3 +5,5 @@ Ciphers:
  1. Substitution Ciphers:
     - Ceasar Cipher
     -  Mono-Alphabetic Cipher
+    -  Playfair Cipher
+    -  Hill Cipher
